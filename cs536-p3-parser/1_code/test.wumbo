@@ -1,0 +1,186 @@
+/// final test case
+
+/// test variable decl
+int a;
+bool b;
+void c;
+struct s d;
+
+/// test struct decl
+struct s{int a; bool b; void c;};
+
+/// test funtion decl
+int fun1(){
+    /// test varDeclList
+    int a;
+    bool b;
+    void c;
+    struct s d;
+    // given case
+    if (b == -1) { x = 4+3*5-y; while (c) { y = y*2+x; } } else { x = 0; }
+}
+bool fun2(int a, bool b, void c){
+    /// test varDeclList
+    int a;
+    bool b;
+    void c;
+    struct s d;
+
+    /// test stmtList
+    a=1; b=true; c="helloworld"; d.a=5;
+    a++; d.a++;
+    a--; d.a--;
+    cin>>a; cin>>d.a;
+    cout<<a; cout<<d.a;
+
+    // test if, precedence and associativity
+    if(a+b && a-b && a*b && a/b || !a || a!=b || a==b || a>b || a<b || a>=b || a<=b || -a || 3 || foo() || foo(a)){
+        int a;
+        bool b;
+        void c;
+        struct s d;
+        a=1;b=false;
+    }
+    if(true || s.a || (a-(b+c))*d){
+        int a;
+        bool b;
+        void c;
+        struct s d;
+        a=1;b=false;
+    }else{
+        int a;
+        bool b;
+        void c;
+        struct s d;
+        a=1;b=false;
+    } 
+
+    // test while
+    while(a+b || s.a){
+        int a;
+    }
+
+    // test repeat
+    repeat(a+b){
+        int a;
+    }
+
+    // test return;
+    return a;
+    return a+b;
+    return ((a+b)||false);
+    return foo();
+    return foo(a);
+    return;
+
+    // test function call
+    foo();
+    foo(a);
+    foo(s.a);
+    foo(s.a.b);
+    foo(a,true);
+}
+
+
+
+
+/// old
+int a;
+bool b;
+struct s {
+    int e;
+};
+
+void foo(int a, bool b){
+    bool g;
+    void h;
+}
+
+bool h;
+struct mystruct a;
+
+
+void foo(int a, bool b){
+    a=1;
+    a="helloworld";
+    a=true;
+    a=false;
+    b++;
+    c--;
+    stru.fiel++;
+
+    cin>>d;
+    cout<<e;
+
+    if ((a=1)){
+        int aa;
+        bool bb;
+        aa=0;
+    }else{
+        int cc;
+        cc=1;
+    }
+
+    while(a+(b-c)*d+e/f){
+        int wa;
+        wa=1;
+    }
+
+
+    repeat(!a){
+        int ra;
+        ra=1;
+    }
+    
+    return ret;
+    return;
+
+    bar(a);
+
+    
+    if(a&&b||c==d||f!=e||g>h||i<j || k<=l||m>=n){}
+    if(-a){}
+    if(boo(a)){}
+
+}
+
+
+////
+
+int x;
+int y;
+bool z;
+void k;
+struct s {
+    int a;
+    bool b;
+    void c;
+};
+void func(int d, bool e) {
+    int a;
+    bool b;
+    void c;
+    struct s d;
+    struct d s;
+    return false;
+    return true;
+    return 5;
+    return (5);
+    return "str";
+    return p.first;
+    return a = b = 1;
+    return a+b;
+    return a-b;
+    return a/b-c;
+    return a*b+d/w;
+    return !a;
+    return -a-b;
+    return a && b;
+    return a || b;
+    return true && false || 3; 
+    return a == b;
+    return a < b*2;
+    return a > b+3;
+    return;
+}
+

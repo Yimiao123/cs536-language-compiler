@@ -1,0 +1,206 @@
+struct Two{
+    int x;
+    int y;
+};
+
+struct Three{
+    int x;
+    int y;
+    bool z;
+};
+
+int g(bool b){
+    // return error
+    return; // Missing return value
+    return b; // Bad return value
+}
+
+void h(int a, bool b){
+
+}
+
+bool k(int a){
+
+}
+
+void f(){
+    int a;
+    bool b;
+    struct Two two;
+    struct Three three;
+
+    // cout/cin error
+    cout<<f; // Attempt to write a function
+    cout<<Two; // Attempt to write a struct name
+    cout<<two; // Attempt to write a struct variable
+    cout<<f(); // Attempt to write void
+    cin>>f; // Attempt to read a function
+    cin>>Two; // Attempt to read a struct name
+    cin>>two; // Attempt to read a struct variable
+
+    // call error
+    a(); // Attempt to call a non-function
+    f(a); // Function call with wrong number of args
+    g(a); // Type of actual does not match type of formal
+    h(b,a); // Type of actual does not match type of formal; Type of actual does not match type of formal
+
+    // return error
+    return a; // Return with a value in a void function
+
+    // arithmetic operator error
+    a=a+b; // Arithmetic operator applied to non-numeric operand
+    a=a-b; // Arithmetic operator applied to non-numeric operand
+    a=a*b; // Arithmetic operator applied to non-numeric operand
+    a=a/b; // Arithmetic operator applied to non-numeric operand
+    b++; // Arithmetic operator applied to non-numeric operand
+    b--; // Arithmetic operator applied to non-numeric operand
+
+    // relational operator error
+    a=(a>b); //Relational operator applied to non-numeric operand
+    a=(a<b); //Relational operator applied to non-numeric operand
+    a=(a>=b); //Relational operator applied to non-numeric operand
+    a=(a<=b); //Relational operator applied to non-numeric operand
+
+    // logical operator error
+    a=(!a); // Logical operator applied to non-bool operand
+    a=(a || b); // Logical operator applied to non-bool operand
+    a=(a && b); // Logical operator applied to non-bool operand
+
+    // if/ifelse/while/repeat condition error
+    if(a){} // Non-bool expression used as an if condition
+    if(a){}else{} // Non-bool expression used as an if condition
+    while(a){} // Non-bool expression used as a while condition
+    repeat(b){} // Non-integer expression used as a repeat clause
+
+    // equality/assign operator error
+    a=(a==b); // Type mismatch
+    a=(a!=b); // Type mismatch
+    a=true; // Type mismatch
+    a=(f()==h(a,b)); // Equality operator applied to void functions
+    a=(f==g); //  Equality operator applied to functions
+    a=(Two==Three); // Equality operator applied to struct names
+    a=(two==three); // Equality operator applied to struct variables
+    f=g; // Function assignment
+    Two=Three; // Struct name assignment
+    two=three; // Struct variable assignment
+
+    // prevent cascading error
+    cout<<Two+1; // Arithmetic operator applied to non-numeric operand
+    a=(true+3)*4; // Arithmetic operator applied to non-numeric operand
+    a=(true && (false || 3)); // Logical operator applied to non-bool operand
+    k("a" * 4); // Arithmetic operator applied to non-numeric operand
+    a=1+a(); // Attempt to call a non-function
+    a= ((true + 3) == two); // Arithmetic operator applied to non-numeric operand
+
+    // two error message in one line
+    a=true + "hello"; // Arithmetic operator applied to non-numeric operand; Arithmetic operator applied to non-numeric operand
+    a=1 + k(true); // Type of actual does not match type of formal; Arithmetic operator applied to non-numeric operand
+    a=1+f(1,2); // Function call with wrong number of args; Arithmetic operator applied to non-numeric operand
+    return (3+true); // Arithmetic operator applied to non-numeric operand; Return with a value in a void function
+
+    // inside a new scope error
+    if(true){
+        // cout & cin error
+        cout<<f; // Attempt to write a function
+        cout<<Two; // Attempt to write a struct name
+        cout<<two; // Attempt to write a struct variable
+        cout<<f(); // Attempt to write void
+        cin>>f; // Attempt to read a function
+        cin>>Two; // Attempt to read a struct name
+        cin>>two; // Attempt to read a struct variable
+
+        // call error
+        a(); // Attempt to call a non-function
+        f(a); // Function call with wrong number of args
+        g(a); // Type of actual does not match type of formal
+        h(b,a); // Type of actual does not match type of formal; Type of actual does not match type of formal
+
+        // return error
+        return a; // Return with a value in a void function
+    }
+
+    while(true){
+        // arithmetic operator error
+        a=a+b; // Arithmetic operator applied to non-numeric operand
+        a=a-b; // Arithmetic operator applied to non-numeric operand
+        a=a*b; // Arithmetic operator applied to non-numeric operand
+        a=a/b; // Arithmetic operator applied to non-numeric operand
+        b++; // Arithmetic operator applied to non-numeric operand
+        b--; // Arithmetic operator applied to non-numeric operand
+
+        // relational operator error
+        a=(a>b); //Relational operator applied to non-numeric operand
+        a=(a<b); //Relational operator applied to non-numeric operand
+        a=(a>=b); //Relational operator applied to non-numeric operand
+        a=(a<=b); //Relational operator applied to non-numeric operand
+
+        // logical operator error
+        a=(!a); // Logical operator applied to non-bool operand
+        a=(a || b); // Logical operator applied to non-bool operand
+        a=(a && b); // Logical operator applied to non-bool operand
+
+        // return error
+        return a; // Return with a value in a void function
+    }
+
+    repeat(1){
+        // equality/assign operator error
+        a=(a==b); // Type mismatch
+        a=(a!=b); // Type mismatch
+        a=true; // Type mismatch
+        a=(f()==h(a,b)); // Equality operator applied to void functions
+        a=(f==g); //  Equality operator applied to functions
+        a=(Two==Three); // Equality operator applied to struct names
+        a=(two==three); // Equality operator applied to struct variables
+        f=g; // Function assignment
+        Two=Three; // Struct name assignment
+        two=three; // Struct variable assignment
+
+        // return error
+        return a; // Return with a value in a void function
+    }
+}
+
+// given example
+bool bbb;
+struct S { int a; };
+struct S t;
+
+void w(int p1, bool p2) {
+}
+
+void main() {
+    int aaa;
+
+    // some errors involving illegal operations on functions
+    aaa = w + w; // Arithmetic operator applied to non-numeric operand; Arithmetic operator applied to non-numeric operand
+    bbb = w == 3; // Type mismatch
+    bbb = w > main; // Relational operator applied to non-numeric operand; Relational operator applied to non-numeric operand
+    bbb = w == w; // Equality operator applied to functions
+
+    // some errors involving bad function calls 
+    aaa(); // Attempt to call a non-function
+    w(); // Function call with wrong number of args
+    w(5); // Function call with wrong number of args
+    w(aaa, aaa); // Type of actual does not match type of formal
+    w(t, t.a); // Type of actual does not match type of formal; Type of actual does not match type of formal
+    S(); // Attempt to call a non-function
+
+    // some errors involving structs 
+    t = 5; // Type mismatch
+    t = t; // Struct variable assignment
+    cin >> S; // Attempt to read a struct name
+    t = true || 3; // Logical operator applied to non-bool operand
+    bbb = S && t.a; // Logical operator applied to non-bool operand; Logical operator applied to non-bool operand
+
+    // error involving return
+    return 10; // Return with a value in a void function
+
+    // other type errors 
+    aaa = aaa + (!false); // Arithmetic operator applied to non-numeric operand
+    aaa = aaa + "foo"; // Arithmetic operator applied to non-numeric operand
+    bbb = aaa; // Type mismatch
+
+    // don't give too many or too few error messages here 
+    bbb = (aaa + true) && (bbb < true); // Arithmetic operator applied to non-numeric operand; Relational operator applied to non-numeric operand; Relational operator applied to non-numeric operand
+}

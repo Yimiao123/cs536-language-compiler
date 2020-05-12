@@ -1,0 +1,38 @@
+bool a;
+int a; // Multiply declared identifier
+int b;
+int c;
+void c; // Non-function declared void; Multiply declared identifier
+
+struct Two{
+    int x;
+    int y;
+    void z; // Non-function declared void
+};
+struct Three{
+    struct Two w;
+    int z;
+};
+struct Same{
+    int Same;
+};
+struct a{ // Multiply declared identifier
+    int a;
+};
+
+int f(){}
+
+void g(int x, bool y){
+    int a;
+    bool b;
+    bool x; // Multiply declared identifier
+    int y; // Multiply declared identifier
+    struct Three p;
+    struct Same Same;
+    struct Nonexisting q; // Invalid name of struct type
+
+    d=1; // Undeclared identifier
+    q.x=1; // Undeclared identifier; Dot-access of nonstruct type
+    p.x=1; // Invalid struct field name
+    p.w.x.a=1; // Dot-access of nonstruct type
+}

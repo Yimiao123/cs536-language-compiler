@@ -1,0 +1,55 @@
+javac -g -cp ./deps:. Type.java ast.java Sym.java
+javac -g -cp ./deps:. Sym.java ast.java
+javac -g -cp ./deps:. ast.java Type.java
+javac -g -cp ./deps:. parser.java
+Note: parser.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+javac -g -cp ./deps:. P6.java
+java -cp ./deps:. P6 test.wumbo test.s
+SPIM Version 8.0 of January 8, 2010
+Copyright 1990-2010, James R. Larus.
+All Rights Reserved.
+See the file README for a full copyright notice.
+Loaded: /u/c/s/cs536-1/public/tools/spim//exceptions.s
+spim: (parser) Label is defined for the second time on line 73 of file test.s
+          __start:
+                 ^
+-----TEST START-----
+-----assign & int test-----
+Expect=1, Result=1
+Expect=2, Result=2
+Expect=1, Result=1
+Expect=0, Result=0
+Expect=2, Result=2
+Expect=4, Result=4
+Expect=2, Result=2
+Expect=8, Result=8
+Expect=1, Result=1
+Expect=-1, Result=-1
+Expect=-2, Result=-2
+Expect=-1, Result=-1
+-----assign & bool test-----
+Expect=0, Result=0
+Expect=0, Result=0
+Expect=1, Result=1
+Expect=0, Result=0
+Expect=0, Result=0
+Expect=1, Result=1
+Expect=1, Result=1
+Expect=0, Result=0
+Expect=1, Result=1
+Expect=0, Result=0
+Expect=1, Result=1
+-----if test-----
+if correct
+ifelse correct
+ifelse correct
+-----while test-----
+Expect=0 1 2 3 4, Result=0 1 2 3 4 
+-----call & return test-----
+Expect=66, Result=66
+Expect=2, Result=2
+-----read & write test-----
+Please type 101 here and press enter: 101
+Expect=101, Result=101
+-----TEST END-----

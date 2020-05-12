@@ -1,0 +1,105 @@
+struct Two{
+    int x;
+    int y;
+};
+
+struct Three{
+    int x;
+    int y;
+    bool z;
+};
+
+int g(bool b) {
+    return 1;
+}
+
+void h(int a, bool b) {
+}
+
+bool k(int a) {
+    return true;
+}
+
+void f() {
+    int a;
+    bool b;
+    struct Two two;
+    struct Three three;
+    cout << a(int);
+    cout << b(bool);
+    cout << two(Two).x(int);
+    cout << three(Three).z(bool);
+    cin >> a(int);
+    cin >> b(bool);
+    cin >> two(Two).x(int);
+    cin >> three(Three).z(bool);
+    g(bool->int)(b(bool));
+    h(int,bool->void)(a(int), b(bool));
+    k(int->bool)(a(int));
+    f(->void)();
+    return;
+    a(int) = (a(int) + a(int));
+    a(int) = (a(int) - a(int));
+    a(int) = (a(int) * a(int));
+    a(int) = (a(int) / a(int));
+    a(int)++;
+    a(int)--;
+    b(bool) = (a(int) > a(int));
+    b(bool) = (a(int) < a(int));
+    b(bool) = (a(int) >= a(int));
+    b(bool) = (a(int) <= a(int));
+    b(bool) = (!b(bool));
+    b(bool) = (b(bool) && b(bool));
+    b(bool) = (b(bool) || b(bool));
+    if (b(bool)) {
+    }
+    if (b(bool)) {
+    }
+    else {
+    }
+    while (b(bool)) {
+    }
+    repeat (a(int)) {
+    }
+    b(bool) = (a(int) == a(int));
+    b(bool) = (a(int) != a(int));
+    a(int) = a(int);
+    b(bool) = b(bool);
+    if (true) {
+        cout << a(int);
+        cout << b(bool);
+        cout << two(Two).x(int);
+        cout << three(Three).z(bool);
+        cin >> a(int);
+        cin >> b(bool);
+        cin >> two(Two).x(int);
+        cin >> three(Three).z(bool);
+        g(bool->int)(b(bool));
+        h(int,bool->void)(a(int), b(bool));
+        k(int->bool)(a(int));
+        f(->void)();
+    }
+    while (true) {
+        return;
+        a(int) = (a(int) + a(int));
+        a(int) = (a(int) - a(int));
+        a(int) = (a(int) * a(int));
+        a(int) = (a(int) / a(int));
+        a(int)++;
+        a(int)--;
+        b(bool) = (a(int) > a(int));
+        b(bool) = (a(int) < a(int));
+        b(bool) = (a(int) >= a(int));
+        b(bool) = (a(int) <= a(int));
+        b(bool) = (!b(bool));
+        b(bool) = (b(bool) && b(bool));
+        b(bool) = (b(bool) || b(bool));
+    }
+    repeat (1) {
+        b(bool) = (a(int) == a(int));
+        b(bool) = (a(int) != a(int));
+        a(int) = a(int);
+        b(bool) = b(bool);
+    }
+}
+

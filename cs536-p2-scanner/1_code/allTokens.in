@@ -1,0 +1,91 @@
+int main(int argc){
+    /// reserved words and identifier
+    ## reserved words and identifier
+    bool int void true false struct /// test line commment at the end
+    cin cout if else while return ## test line commment at the end
+
+    ## identifier
+    a b1 c_c2 _d3_d _e_if_e_4
+
+    ## integer literal
+    1 567 32767 10000 12345
+
+    ## string literal
+    ""
+    "&!88"
+    "use \n to denote a newline character"
+    "include a quote like this \" and a backslash like this \\"
+    "\"is\" this \t \'a\'      \\string 5\?\n"
+    
+    ## symbols
+    { } ( )
+    , . << >> ++
+    -- + - * /
+    ! && || == !=
+    < > <= >= =
+
+    ## comprehensive
+    bool a; int b1; void c_c2; struct _d3_d, _e_if_e_4
+
+    bool f=false; int g=32767;
+    
+    String str1="";
+    String str2="&!88";
+    String str3="use \n to denote a newline character";
+    String str4="include a quote like this \" and a backslash like this \\";
+    String str5="\"is\" this \t \'a\'      \\string 5\?\n";
+
+    if(!f && f==false || f!=true){
+        int a=0, b=0;
+        if(a+b>1 && a+b>=1 && a+b<1 && a+b<=1 && a*b==0 && a/b==0){
+            cin>>a;
+            cout<<b;
+        }
+        _d3_d.field=true;
+        a++;--b;
+    }
+
+    return 0;
+}
+
+/// character errors
+
+## illegal
+\a #
+good1
+"good1"
+
+
+/// string errors
+
+## unterminated
+"unterminated
+"also unterminated \"
+"unterminated \n
+"
+good2
+"good2"
+
+## bad escape
+"backslash followed by space: \ is not allowed"
+"bad escape \a"
+"bad escape \x"
+good3
+"good3"
+
+## unterminated and bad escape
+"bad escaped character: \a AND not terminated
+"unterminated and bad lit \x
+"unterminated and bad lit \x \"
+"very bad string \
+
+
+/// int errors
+
+## big
+2147483648
+21474836472147483647
+good5"good5"
+
+## unterminated
+"unterminated string (eof)

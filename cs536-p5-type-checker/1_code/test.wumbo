@@ -1,0 +1,124 @@
+struct Two{
+    int x;
+    int y;
+};
+
+struct Three{
+    int x;
+    int y;
+    bool z;
+};
+
+int g(bool b){
+    // return correct
+    return 1;
+}
+
+void h(int a, bool b){
+
+}
+
+bool k(int a){
+    // return correct
+    return true;
+}
+
+void f(){
+    int a;
+    bool b;
+    struct Two two;
+    struct Three three;
+
+    // cout/cin correct
+    cout<<a;
+    cout<<b;
+    cout<<two.x;
+    cout<<three.z;
+    cin>>a;
+    cin>>b;
+    cin>>two.x;
+    cin>>three.z;
+
+    // call correct
+    g(b);
+    h(a,b);
+    k(a);
+    f();
+
+    // return correct
+    return;
+
+    // arithmetic/relational/logical operator correct
+    a=a+a;
+    a=a-a;
+    a=a*a;
+    a=a/a;
+    a++;
+    a--;
+    b=(a>a);
+    b=(a<a);
+    b=(a>=a);
+    b=(a<=a);
+    b=(!b);
+    b=(b&&b);
+    b=(b||b);
+
+    // if/ifelse/while/repeat statment correct
+    if(b){}
+    if(b){}else{}
+    while(b){}
+    repeat(a){}
+
+    // equality/assign operator error
+    b=(a==a);
+    b=(a!=a);
+    a=a;
+    b=b;
+
+    // inside a new scope correct
+    if(true){
+        // cout/cin correct
+        cout<<a;
+        cout<<b;
+        cout<<two.x;
+        cout<<three.z;
+        cin>>a;
+        cin>>b;
+        cin>>two.x;
+        cin>>three.z;
+
+        // call correct
+        g(b);
+        h(a,b);
+        k(a);
+        f();
+    }
+
+    while(true){
+        // return correct
+        return;
+
+        // arithmetic/relational/logical operator correct
+        a=a+a;
+        a=a-a;
+        a=a*a;
+        a=a/a;
+        a++;
+        a--;
+        b=(a>a);
+        b=(a<a);
+        b=(a>=a);
+        b=(a<=a);
+        b=(!b);
+        b=(b&&b);
+        b=(b||b);
+    }
+
+    repeat(1){
+        // equality/assign operator error
+        b=(a==a);
+        b=(a!=a);
+        a=a;
+        b=b;
+    }
+}

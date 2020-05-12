@@ -1,0 +1,74 @@
+// var declaration
+bool a;
+int b;
+
+// struct definition
+struct Two{
+    int x;
+    int y;
+};
+struct Three{
+    struct Two w;
+    int z;
+};
+struct Same{
+    int Same;
+};
+
+// function declaration
+int f(){}
+
+void g(int x, bool y){
+    int a;
+    bool b;
+    struct Three p;
+    struct Same Same;
+
+    // statements
+    a=1; // int
+    b=false; // bool
+    p.w.x=1; // Three Two int
+    p.w.y=1; // Three Two int
+    p.z=1; // Three int
+    Same.Same=1; // Same int
+    x++; // int
+    x--; // int
+    cin>>x; // int
+    cout<<y; // bool
+    if(x/1 && y==true || a!=2 || p.w.x=1){} // int bool int Three Two int
+    if(x*1 && -a || !b){ // int int bool
+        // shadowing
+        bool a;
+        int b;
+        a=true; // bool
+        b=1; // int
+    }else{
+        // shadowing
+        int a;
+        bool b;
+        a=2; // int
+        b=false; // bool
+    }
+    while(x-1 && -a || !b || x>2 || x<2 || x>=2 || x<=2){ // int int bool int int int int
+        int b;
+        b=5; // int
+    }
+    repeat(x+1 && -a || !b){ // int int bool
+        int b;
+        b=5; // int
+    }
+
+    // function call
+    f(); // ->int
+    g(a,a); // int,bool->void int int
+
+    // return
+    return (x==1 && -a || !b || p.w.x=1); // int int bool Three Two int
+
+}
+
+void h(int a){
+    // overwrite
+    int h;
+    h=1; // int
+}

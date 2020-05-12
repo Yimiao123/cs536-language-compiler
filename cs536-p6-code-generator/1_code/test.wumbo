@@ -1,0 +1,252 @@
+int ga;
+bool gb;
+
+int f(int a){
+    return a;
+}
+
+int g(int a){
+    int b;
+    b=2;
+    return b;
+}
+
+
+void main(){
+    int a;
+    int b;
+    int cnt;
+    bool c;
+    bool d;
+
+    cout<<"-----TEST START-----";
+    cout<<"\n";
+
+    // assign & int test
+    cout<<"-----assign & int test-----";
+    cout<<"\n";
+
+    a=1;
+    cout<<"Expect=1, Result=";
+    cout<<a; // 1
+    cout<<"\n";
+
+    b=2;
+    cout<<"Expect=2, Result=";
+    cout<<b; // 2
+    cout<<"\n";
+
+    c=true;
+    cout<<"Expect=1, Result=";
+    cout<<c; // 1
+    cout<<"\n";
+    
+    d=false;
+    cout<<"Expect=0, Result=";
+    cout<<d; // 0
+    cout<<"\n";
+
+    a=b;
+    cout<<"Expect=2, Result=";
+    cout<<a; // 2
+    cout<<"\n";
+
+    a=a+b;
+    cout<<"Expect=4, Result=";
+    cout<<a; // 4
+    cout<<"\n";
+
+    a=a-b;
+    cout<<"Expect=2, Result=";
+    cout<<a; // 2
+    cout<<"\n";
+
+    a=a*a*a;
+    cout<<"Expect=8, Result=";
+    cout<<a; // 8
+    cout<<"\n";
+
+    a=a/a;
+    cout<<"Expect=1, Result=";
+    cout<<a; // 1
+    cout<<"\n";
+
+    a=-a;
+    cout<<"Expect=-1, Result=";
+    cout<<a; // -1
+    cout<<"\n";
+
+    a--;
+    cout<<"Expect=-2, Result=";
+    cout<<a;
+    cout<<"\n";
+
+    a++;
+    cout<<"Expect=-1, Result=";
+    cout<<a;
+    cout<<"\n";
+
+    // assign & bool test
+    cout<<"-----assign & bool test-----";
+    cout<<"\n";
+
+    c=!c;
+    cout<<"Expect=0, Result=";
+    cout<<c; // 0
+    cout<<"\n";
+
+    c=c && true;
+    cout<<"Expect=0, Result=";
+    cout<<c; // 0
+    cout<<"\n";
+
+    c=c || true;
+    cout<<"Expect=1, Result=";
+    cout<<c;
+    cout<<"\n";
+
+    c=c && d;
+    cout<<"Expect=0, Result=";
+    cout<<c;
+    cout<<"\n";
+
+    c=(a==b);
+    cout<<"Expect=0, Result=";
+    cout<<c;
+    cout<<"\n";
+
+    c=(a==a);
+    cout<<"Expect=1, Result=";
+    cout<<c;
+    cout<<"\n";
+
+    c=(a!=b);
+    cout<<"Expect=1, Result=";
+    cout<<c;
+    cout<<"\n";
+
+    c=(a<a);
+    cout<<"Expect=0, Result=";
+    cout<<c;
+    cout<<"\n";
+
+    c=(a<=a);
+    cout<<"Expect=1, Result=";
+    cout<<c;
+    cout<<"\n";
+
+    c=(a>a);
+    cout<<"Expect=0, Result=";
+    cout<<c;
+    cout<<"\n";
+
+    c=(a>=a);
+    cout<<"Expect=1, Result=";
+    cout<<c;
+    cout<<"\n";
+
+    // if test
+    cout<<"-----if test-----";
+    cout<<"\n";
+
+    if(c){
+        cout<<"if correct";
+        cout<<"\n";
+    }
+
+    if(c){
+        cout<<"ifelse correct";
+        cout<<"\n";
+    }else{
+        cout<<"error";
+        cout<<"\n";
+    }
+
+    if(!c){
+        cout<<"error";
+        cout<<"\n";
+    }else{
+        cout<<"ifelse correct";
+        cout<<"\n";
+    }
+
+    // while test
+    cout<<"-----while test-----";
+    cout<<"\n";
+
+    cout<<"Expect=0 1 2 3 4, Result=";
+    cnt=0;
+    while(cnt<5){
+        cout<<cnt;
+        cout<<" ";
+        cnt++;
+    }
+    cout<<"\n";
+
+    // call & return test
+    cout<<"-----call & return test-----";
+    cout<<"\n";
+
+    cout<<"Expect=66, Result=";
+    cout<<f(66);
+    cout<<"\n";
+
+    cout<<"Expect=2, Result=";
+    cout<<g(66);
+    cout<<"\n";
+
+    // read & write test
+    cout<<"-----read & write test-----";
+    cout<<"\n";
+
+    cout<<"Please type 101 here and press enter: ";
+    cin>>a;
+    cout<<"Expect=101, Result=";
+    cout<<a;
+    cout<<"\n";
+
+    cout<<"-----TEST END-----";
+    cout<<"\n";
+}
+
+
+
+
+// int a;
+// 
+// int f(int a){
+//     return a;
+// }
+// 
+// void main(){
+//     int a;
+//     bool b;
+// 
+//     a=1;
+//     b=false;
+//     a=a;
+//     a=-a;
+//     b=!b;
+//     a=a+1;
+//     a=a-1;
+//     a=a*1;
+//     a=a/1;
+//     b=(b && true);
+//     b=(true || b);
+//     b=(b==b);
+//     b=(b!=b);
+//     b=(a<a);
+//     b=(a>a);
+//     b=(a<=a);
+//     b=(a>=a);
+//     a++;
+//     a--;
+//     return;
+//     cin>>a;
+//     cout<<a;
+//     if(b){}
+//     if(b){}else{}
+//     while(b){}
+//     return;
+//     a=f(5);
+// }
